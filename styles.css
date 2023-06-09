@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;0;700&display=swap");
+
+:root {
+  --clr-bg: #d3d7e0;
+  --clr-text-primary: #373c47;
+  --clr-text-secondary: #fbfdff;
+  --border: #90919b;
+  --clr-after-bg: #fab564;
+  --clr-button: #87a0ce;
+  --border-round: 1rem;
+  --text-light: 300;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--clr-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  font-family: poppins;
+  position: relative;
+}
+.users-list {
+  width: 70%;
+  height: 80%;
+  background-color: white;
+  border-radius: var(--border-round);
+  overflow: hidden;
+  padding: 3rem;
+}
+.users-list h1 {
+  margin-bottom: 1rem;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .search-box {
+  width: 18rem;
+  height: 2.7rem;
+  border: 1px solid var(--clr-button);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  overflow: hidden;
+}
+.header .search-box input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+.header .search-box i {
+  margin-left: 1rem;
+  font-size: 1.3rem;
+}
+.header ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header ul li {
+  list-style: none;
+  padding: 0.7rem 0.7rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+  color: var(--clr-text-primary);
+  margin: 0.1rem;
+}
+.header ul li:hover {
+  background-color: var(--clr-button);
+  color: white;
+}
+.header ul li:nth-child(2) {
+  background-color: var(--clr-button);
+  color: white;
+}
+.users {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  overflow-y: auto;
+}
+.users .user {
+  display: flex;
+  gap: 0.5rem;
+  height: 9rem;
+  border-radius: 0.6rem;
+  padding: 0.8rem;
+  overflow-y: hidden;
+  transition: all 0.4s ease-in-out;
+  background-color: var(--clr-text-secondary);
+}
+.user:hover {
+  border: 1px solid var(--clr-button);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.users .user:nth-child(2) {
+  border: 1px solid var(--clr-button);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.image img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid blue;
+}
+.user .info {
+  padding: -1rem;
+  padding-top: 0.5rem;
+}
+.user .info p {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+}
+.user h1 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+.user .tags {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 10rem;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 1rem;
+}
+.user .tags button {
+  border: 1px solid var(--clr-button);
+  padding: 0.4rem 0.5rem;
+  border-radius: 0.9rem;
+  font-size: 0.7rem;
+  background-color: transparent;
+  color: var(--clr-button);
+  transition: all 0.3s ease-in-out;
+}
+.user .tags button:hover {
+  background-color: var(--clr-button);
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .users-list {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: var(--border-round);
+    overflow: scroll;
+    padding: 1rem;
+  }
+  .users-list h1 {
+    margin-bottom: 1rem;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header .search-box {
+    width: 100%;
+    height: 2.7rem;
+    border: 1px solid var(--clr-button);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    overflow: hidden;
+  }
+  .header ul li {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+  .user {
+    width: 100%;
+  }
+}
+
+@media screen and(max-width: 1100px) {
+  .users-list {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: var(--border-round);
+    overflow: scroll;
+    padding: 1rem;
+  }
+  .users-list h1 {
+    margin-bottom: 1rem;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header .search-box {
+    width: 100%;
+    height: 2.7rem;
+    border: 1px solid var(--clr-button);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    overflow: hidden;
+  }
+  .header ul li {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+  }
+  .user {
+    width: 100%;
+    height: 10rem;
+    padding: 1rem 0;
+    font-size: 1rem;
+  }
+}
